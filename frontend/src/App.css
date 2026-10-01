@@ -90,4 +90,301 @@ body{
   
 } */
 
-  
+  /* ================================
+   MINIMALIST MORPHISM UI
+   Library Management System
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: #eef1f5;
+  color: #20242a;
+}
+
+/* Main App */
+.App {
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* Main Container */
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.header p {
+  color: #777;
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+/* ================================
+   FORM CARD
+================================ */
+
+.student-form {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  padding: 30px;
+  border-radius: 24px;
+
+  box-shadow:
+    8px 8px 20px rgba(0, 0, 0, 0.08),
+    -8px -8px 20px rgba(255, 255, 255, 0.9);
+
+  margin-bottom: 35px;
+}
+
+.student-form h2 {
+  margin-bottom: 22px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Inputs */
+
+.student-form input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 14px;
+
+  background: #eef1f5;
+
+  color: #222;
+  font-size: 14px;
+
+  box-shadow:
+    inset 3px 3px 7px rgba(0, 0, 0, 0.07),
+    inset -3px -3px 7px rgba(255, 255, 255, 0.8);
+
+  transition: 0.25s ease;
+}
+
+.student-form input:focus {
+  box-shadow:
+    0 0 0 2px rgba(80, 100, 255, 0.15),
+    inset 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.student-form input::placeholder {
+  color: #999;
+}
+
+/* Button */
+
+.student-form button {
+  width: 100%;
+  border: none;
+  outline: none;
+
+  padding: 14px;
+
+  border-radius: 14px;
+
+  background: #20242a;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+
+  box-shadow:
+    5px 5px 12px rgba(0, 0, 0, 0.15),
+    -3px -3px 8px rgba(255, 255, 255, 0.8);
+}
+
+.student-form button:hover {
+  transform: translateY(-2px);
+  background: #111318;
+}
+
+.student-form button:active {
+  transform: scale(0.98);
+}
+
+/* ================================
+   STUDENT / BOOK LIST
+================================ */
+
+.student-list {
+  background: rgba(255, 255, 255, 0.75);
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  padding: 30px;
+
+  border-radius: 24px;
+
+  box-shadow:
+    8px 8px 20px rgba(0, 0, 0, 0.08),
+    -8px -8px 20px rgba(255, 255, 255, 0.9);
+
+  overflow-x: auto;
+}
+
+.student-list h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* ================================
+   TABLE
+================================ */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+thead {
+  background: #eef1f5;
+}
+
+th {
+  padding: 15px;
+  text-align: left;
+
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+
+  color: #777;
+}
+
+td {
+  padding: 17px 15px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+  font-size: 14px;
+}
+
+tbody tr {
+  transition: 0.2s ease;
+}
+
+tbody tr:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* ================================
+   EDIT BUTTON
+================================ */
+
+.student-list button {
+  border: none;
+
+  padding: 8px 15px;
+
+  border-radius: 10px;
+
+  background: #e4e8ef;
+
+  color: #20242a;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+
+  box-shadow:
+    3px 3px 7px rgba(0, 0, 0, 0.08),
+    -3px -3px 7px rgba(255, 255, 255, 0.8);
+}
+
+.student-list button:hover {
+  background: #20242a;
+  color: white;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+  .App {
+    padding: 25px 15px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .header h1 {
+    font-size: 26px;
+  }
+
+  .student-form,
+  .student-list {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  table {
+    min-width: 650px;
+  }
+}
+
+/* ================================
+   SCROLLBAR
+================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eef1f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c7ccd4;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}

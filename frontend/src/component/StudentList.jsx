@@ -5,23 +5,22 @@ return (
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Roll No</th>
-<th>Course</th>
+<th>Book Title</th>
+<th>Author</th>
+<th>Category</th>
 <th>Year</th>
-<th>Email</th>
+<th>ISBN</th>
 <th>Action</th>
 </tr>
 </thead>
 <tbody>
 {students.map((s) => (
 <tr key={s._id}>
-<td>{s.name}</td>
-<td>{s.rollNo}</td>
-<td>{s.course}</td>
-
+<td>{s.booktitle}</td>
+<td>{s.author}</td>
+<td>{s.category}</td>
 <td>{s.year}</td>
-<td>{s.email}</td>
+<td>{s.isbn}</td>
 <td>
 <button onClick={() => onEdit(s)}>Edit</button>
 </td>

@@ -9,12 +9,12 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 app.get("/", (req, res) => {
-res.send("Student Management System API is running");
+res.send("Library Management System API is running");
 });
 const PORT = process.env.PORT || 5000;
 
-const studentRoutes = require("./routes/studentRoutes");
-app.use("/api/students", studentRoutes);
+const libraryRoutes = require("./routes/libraryRoutes");
+app.use("/api/libraries", libraryRoutes);
 
 app.listen(PORT, () => {
 console.log(`Server running on http://localhost:${PORT}`);

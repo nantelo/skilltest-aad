@@ -18,7 +18,7 @@ const [editingStudent, setEditingStudent] = useState(null);
 
 return (
 <div className="container">
-<h1>Student Management System</h1>
+<h1>Library Management System</h1>
 <StudentForm onStudentAdded={fetchStudents}
 editingStudent={editingStudent}
 clearEdit={() => setEditingStudent(null)}
